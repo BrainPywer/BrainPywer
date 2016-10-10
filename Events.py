@@ -14,7 +14,8 @@ class Events:
         :param func: The function we're registering as an event
         :return: func
         """
-        setattr(self._events, func.__name__.lower(), func)
+        setattr(self, func.__name__, func)
+        self._events[func.__name__.lower()] = getattr(self, func.__name__)
         return func
 
     def register(self, func):
@@ -23,20 +24,22 @@ class Events:
         :param func: The function we're registering as an event
         :return: func
         """
-        setattr(self._events, func.__name__.lower(), func)
+        setattr(self, func.__name__, func)
+        self._events[func.__name__.lower()] = getattr(self, func.__name__)
         return func
 
     def unregister(self, func):
         """
         This is a method for programatically removing events
-        :param func: The function to remove
+        :param func: The name of the event to unregister
         :return: False if we failed to find the function to remove
         :return: True if we removed the function
         """
-        if self._events.get(func.__name__.lower()) is None:
+        if self._events.get(func.lower()) is None:
             return False
         else:
-            self._events.pop(func.__name__.lower())
+            delattr(self, self._events[func.lower()].__name__)
+            self._events.pop(func.lower())
             return True
 
     def has_handler(self, event):
