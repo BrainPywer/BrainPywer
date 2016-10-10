@@ -4,7 +4,7 @@ Purpose: The Interface is the forward facing API that the programmer interacts w
 """
 import gevent
 from gevent.event import Event
-from .Events import Events
+from .events import Events
 
 
 class Interface(Events):
