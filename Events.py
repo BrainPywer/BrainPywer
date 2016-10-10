@@ -1,5 +1,6 @@
 """
 BrainPywer Events Implementation
+Some implementation details taken from discord.py written by Danny/Rapptz at https://github.com/Rapptz/discord.py
 """
 import inspect
 
