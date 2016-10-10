@@ -1,5 +1,6 @@
 """
 BrainPywer Dispatcher
+Purpose: The Dispatcher handles communication between the Interface and Gateway
 """
 import gevent
 from gevent.queue import JoinableQueue, Empty
