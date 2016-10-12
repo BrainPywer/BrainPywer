@@ -5,6 +5,9 @@ Some implementation details taken from discord.py written by Danny/Rapptz at htt
 import inspect
 
 class Events:
+    """
+
+    """
     def __init__(self):
         self._events = {}
 
@@ -13,6 +16,7 @@ class Events:
         This is the decorator version of adding events
 
         :param func: The function we're registering as an event
+        :type func: function
         :return: func
         """
         setattr(self, func.__name__, func)
@@ -24,6 +28,7 @@ class Events:
         This is a method for programatically adding new events
 
         :param func: The function we're registering as an event
+        :type func: function
         :return: func
         """
         setattr(self, func.__name__, func)
@@ -35,6 +40,7 @@ class Events:
         This is a method for programatically removing events
 
         :param func: The name of the event to unregister
+        :type func: function
         :return: False if we failed to find the function to remove
         :return: True if we removed the function
         """
@@ -50,6 +56,7 @@ class Events:
         Do we have a handler defined for this event?
 
         :param event: The event name to handle
+        :type event: str
         :return: True if we have a handler defined
         :return: False if no handler is defined for the event
         """
@@ -63,7 +70,8 @@ class Events:
         This function takes a message received from the Dispatcher and sends it to the proper handler.
         If no handler is defined, we call the default handler which should always be defined.
 
-        :param message: A tuple consisting of (event name, relavent data structure)
+        :param message: The message to be dispatched.
+        :type message: tuple (event name, relevant data)
         :return: Nothing
         """
         if self._events.get(message[0].lower()) is None:

@@ -3,14 +3,21 @@
 API Reference
 =============
 
-
 Events
 ------
 .. automodule:: brainpywer.events
-  :members:
 
-.. autoclass:: brainpywer.events.Events
-  :members:
+Dispatcher
+----------
+.. automodule:: brainpywer.dispatcher
+
+Gateway
+-------
+.. automodule:: brainpywer.gateway
+
+Interface
+---------
+.. automodule:: brainpywer.interface
 
 Util Functions
 --------------

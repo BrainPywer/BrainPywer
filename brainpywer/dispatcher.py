@@ -1,5 +1,6 @@
 """
 BrainPywer Dispatcher
+
 Purpose: The Dispatcher handles communication between the Interface and Gateway
 """
 import gevent
@@ -28,7 +29,7 @@ class Dispatcher(gevent.Greenlet):
     @property
     def gw_inbox(self):
         """
-        This is the inbox for the Gateway. It's not accesible outside the class methods.
+        This is the inbox for the Gateway. It's not accessible outside the class methods.
 
         :return: None
         """
