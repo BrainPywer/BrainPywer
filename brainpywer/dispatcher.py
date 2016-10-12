@@ -29,6 +29,7 @@ class Dispatcher(gevent.Greenlet):
     def gw_inbox(self):
         """
         This is the inbox for the Gateway. It's not accesible outside the class methods.
+
         :return: None
         """
         return None
