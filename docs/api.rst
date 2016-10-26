@@ -11,9 +11,9 @@ Dispatcher
 ----------
 .. automodule:: brainpywer.dispatcher
 
-Gateway
+Http-thingamabob
 -------
-.. automodule:: brainpywer.gateway
+.. automodule:: brainpywer.http
 
 Interface
 ---------
@@ -21,4 +21,4 @@ Interface
 
 Util Functions
 --------------
-.. autofunction:: brainpywer.utils.tinyutils.thaw
+.. autofunction:: brainpywer.tinyutils.thaw

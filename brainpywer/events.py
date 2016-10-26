@@ -40,7 +40,7 @@ class Events:
         This is a method for programatically removing events
 
         :param func: The name of the event to unregister
-        :type func: function
+        :type func: str
         :return: False if we failed to find the function to remove
         :return: True if we removed the function
         """
